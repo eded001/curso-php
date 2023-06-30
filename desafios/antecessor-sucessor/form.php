@@ -11,7 +11,7 @@
         <h1>resultado final</h1>
 
         <?php
-            $num = $_GET["num"] ?? "<i>indefinido</i>";
+            $num = $_GET["num"] ?? 0;
             $numAntes = $num - 1;
             $numSuces = $num + 1;
 
