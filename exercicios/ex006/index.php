@@ -15,7 +15,7 @@
     <main>
         <h1>soma de valores</h1>
 
-        <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="get">
+        <form action="<?= $_SERVER["PHP_SELF"] ?>" method="get">
             <label for="v1">valor 1</label>
             <input type="number" name="v1" id="v1" value="<?=$valor1?>">
 
@@ -30,7 +30,7 @@
         <h2>resultado da soma</h2>
 
         <?php
-        $soma = $valor1 + $valor2;
+            $soma = $valor1 + $valor2;
             echo "a soma entre <b>$valor1</b> e <b>$valor2</b> é igual a <b>$soma</b>";
         ?>
     </section>
