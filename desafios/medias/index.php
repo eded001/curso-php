@@ -21,7 +21,7 @@
 
     <main>
         <h2>médias aritméticas</h2>
-        <form action="<? $_SERVER["PHP_SELF"] ?>" method="get">
+        <form action="<?=$_SERVER["PHP_SELF"]?>" method="get">
             <label for="valor1">1° valor</label>
             <input type="number" name="valor1" id="valor1" value="<?=$valor1?>">
 
@@ -41,16 +41,11 @@
     <section>
         <h2>cálculo das médias</h2>
 
-        <?php
-            echo <<< RESULT
-                echo "analisando os valores <i>$valor1</i> e <i>$valor2</i>:";
-
-                <ul>
-                    <li>a <b>média aritmética</b> simples entre os valores é igual a <b><i>$medSimForm</i></b></li>
-                    <li>a <b>média ponderada</b> entre os valores, com os pesos <u>$peso1</u> e <u>$peso2</u>, é igual a <b><i>$medPonForm</i></b></li>
-                </ul>
-            RESULT;
-        ?>
+        <p>analisando os valores <i><?=$valor1?></i> e <i><?=$valor2?></i>:</p>
+        <ul>
+            <li>a <b>média aritmética</b> simples entre os valores é igual a <b><i><?=$medSimForm?></i></b></li>
+            <li>a <b>média ponderada</b> entre os valores, com os pesos <u><?=$peso1?></u> e <u><?=$peso2?></u>, é igual a <b><i><?=$medPonForm?></i></b></li>
+        </ul>
     </section>
 </body>
 </html>
