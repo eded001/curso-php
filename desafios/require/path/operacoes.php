@@ -1,24 +1,15 @@
 <?php
     function operacoes($n1 = 0, $n2 = 0, $operacao = "+")
     {
-        switch($operacao)
+        $resultado = match($operacao)
         {
-            case "+":
-                return $n1 + $n2;
+            "+" => $n1 + $n2,
+            "-" => $n1 - $n2,
+            "*" => $n1 * $n2,
+            "/" => $n1 / $n2,
+            default => "a operação $operacao não consta nos parâmetros da função"
+        };
 
-            case "-":
-                return $n1 - $n2;
-
-            case "*":
-                return $n1 * $n2;
-            case "x":
-                return $n1 * $n2;
-
-            case "/":
-                return $n1 / $n2;
-
-            default:
-                return "a operação $operacao não consta nos parâmetros da função";
-        }
+        return $resultado;
     }
 ?>
