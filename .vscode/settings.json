@@ -1,0 +1,12 @@
+{
+    "sqltools.useNodeRuntime": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "registros",
+            "group": "registros",
+            "database": "${workspaceFolder:curso-php}/desafios/registros-db/registros.db"
+        }
+    ]
+}
